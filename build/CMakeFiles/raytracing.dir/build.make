@@ -69,28 +69,28 @@ include CMakeFiles/raytracing.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/raytracing.dir/flags.make
 
-CMakeFiles/raytracing.dir/main.cpp.o: CMakeFiles/raytracing.dir/flags.make
-CMakeFiles/raytracing.dir/main.cpp.o: /Users/justin/raytracing/main.cpp
-CMakeFiles/raytracing.dir/main.cpp.o: CMakeFiles/raytracing.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/justin/raytracing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/raytracing.dir/main.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/raytracing.dir/main.cpp.o -MF CMakeFiles/raytracing.dir/main.cpp.o.d -o CMakeFiles/raytracing.dir/main.cpp.o -c /Users/justin/raytracing/main.cpp
+CMakeFiles/raytracing.dir/src/main.cpp.o: CMakeFiles/raytracing.dir/flags.make
+CMakeFiles/raytracing.dir/src/main.cpp.o: /Users/justin/raytracing/src/main.cpp
+CMakeFiles/raytracing.dir/src/main.cpp.o: CMakeFiles/raytracing.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/justin/raytracing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/raytracing.dir/src/main.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/raytracing.dir/src/main.cpp.o -MF CMakeFiles/raytracing.dir/src/main.cpp.o.d -o CMakeFiles/raytracing.dir/src/main.cpp.o -c /Users/justin/raytracing/src/main.cpp
 
-CMakeFiles/raytracing.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/raytracing.dir/main.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/justin/raytracing/main.cpp > CMakeFiles/raytracing.dir/main.cpp.i
+CMakeFiles/raytracing.dir/src/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/raytracing.dir/src/main.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/justin/raytracing/src/main.cpp > CMakeFiles/raytracing.dir/src/main.cpp.i
 
-CMakeFiles/raytracing.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/raytracing.dir/main.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/justin/raytracing/main.cpp -o CMakeFiles/raytracing.dir/main.cpp.s
+CMakeFiles/raytracing.dir/src/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/raytracing.dir/src/main.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/justin/raytracing/src/main.cpp -o CMakeFiles/raytracing.dir/src/main.cpp.s
 
 # Object files for target raytracing
 raytracing_OBJECTS = \
-"CMakeFiles/raytracing.dir/main.cpp.o"
+"CMakeFiles/raytracing.dir/src/main.cpp.o"
 
 # External object files for target raytracing
 raytracing_EXTERNAL_OBJECTS =
 
-raytracing: CMakeFiles/raytracing.dir/main.cpp.o
+raytracing: CMakeFiles/raytracing.dir/src/main.cpp.o
 raytracing: CMakeFiles/raytracing.dir/build.make
 raytracing: CMakeFiles/raytracing.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/justin/raytracing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable raytracing"

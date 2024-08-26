@@ -1,9 +1,9 @@
-#include "include/rtweekend.h"
+#include "../include/rtweekend.h"
 
-#include "include/hittable.h"
-#include "include/hittable_list.h"
-#include "include/sphere.h"
-#include "include/camera.h"
+#include "../include/hittable.h"
+#include "../include/hittable_list.h"
+#include "../include/sphere.h"
+#include "../include/camera.h"
 
 #include <fstream>
 #include <string>

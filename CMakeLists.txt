@@ -4,7 +4,7 @@ project(raytracing)
 set(CMAKE_CXX_STANDARD 14)
 
 add_executable(raytracing
-    main.cpp
+    src/main.cpp
     include/color.h
     include/vec3.h
     include/ray.h
