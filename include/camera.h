@@ -117,7 +117,7 @@ class camera {
 
             // Eventually take on the background color, but darker because of
             // the 0.5 multiplication
-            return 0.9 * ray_color(ray(rec.p, direction), depth - 1, world);
+            return 0.1 * ray_color(ray(rec.p, direction), depth - 1, world);
         }
 
         // Make a unit vector with range of [-1, 1]
