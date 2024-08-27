@@ -14,4 +14,5 @@ add_executable(raytracing
     include/rtweekend.h
     include/interval.h
     include/camera.h
+    include/material.h
 )

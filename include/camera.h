@@ -4,6 +4,7 @@
 #include "rtweekend.h"
 
 #include "hittable.h"
+#include "material.h"
 
 class camera {
   public:
@@ -98,26 +99,14 @@ class camera {
         if(world.hit(r, interval(0.001, infinity), rec)) {
             // The ray has hit an object in the scene
 
-            // Simulate Lambertian Reflection.
-            // We want to make the reflected ray more likely to be near the normal vector.
-            // so first, we add a unit vector to the normal vector which is also a unit vector.
-            // The normal vector is a unit length away from the surface, so now we add a 
-            // random unit vector to get a point on the sphere around the normal vector.
-            // From there, we get a vector that we can draw from the hit point to the point 
-            // on the unit sphere around the normal vector.
-            // By doing this, for a dot product of 0.5 - 1, we get a range
-            // of 0 - 60 degrees from the normal vector. From 0.0 to 0.5, we get a range
-            // of 60 - 90 degrees from the normal vector. 
-            // Since the Lambertian Reflection model needs to be more likely to scatter
-            // near the surface normal, we accomplish this with this model
-            vec3 direction = rec.normal + random_unit_vector();
-
-            // Recursively trace a new ray from the hit point into the random direction
-            // Attenuate (reduce) the color by 0.5 to simulate diffuse reflection
-
-            // Eventually take on the background color, but darker because of
-            // the 0.5 multiplication
-            return 0.1 * ray_color(ray(rec.p, direction), depth - 1, world);
+            ray scattered;
+            color attenuation;
+            if (rec.mat->scatter(r, rec, attenuation, scattered)) {
+                // Eventually take on the background color, but darker because of
+                // the attenuation multiplication
+                return attenuation * ray_color(scattered, depth-1, world);
+            }
+            return color(0,0,0);
         }
 
         // Make a unit vector with range of [-1, 1]

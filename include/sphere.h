@@ -6,7 +6,8 @@
 
 class sphere : public hittable {
   public:
-    sphere(const point3& center, double radius) : center(center), radius(std::fmax(0,radius)) {}
+    sphere(const point3& center, double radius, shared_ptr<material> mat) 
+    : center(center), radius(std::fmax(0,radius)), mat(mat) {}
 
     bool hit(const ray& r, interval ray_t, hit_record& rec) const override {
         // This was a derived formula to calculate whether or not the sphere was hit
@@ -45,12 +46,16 @@ class sphere : public hittable {
         vec3 outward_normal = (rec.p - center) / radius;
         rec.set_face_normal(r, outward_normal);
 
+        // Set material of sphere
+        rec.mat = mat;
+
         return true;
     }
 
   private:
     point3 center;
     double radius;
+    shared_ptr<material> mat;
 };
 
 #endif
